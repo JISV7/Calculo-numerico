@@ -9,14 +9,14 @@ class NumeroCondicion:
         self.condicion_matriz = []
     
     def generar_matriz_aleatoria(self, tamano):
-        matriz = np.random.randint(-20, 20, size=(tamano, tamano))
+        matriz = np.random.randint(-20, 21, size=(tamano, tamano))
         print("Matriz generada:\n", matriz)
         return matriz
     
     def obtener_condicion(self):
         tamano = self.n
         matriz = self.generar_matriz_aleatoria(tamano)
-        matriz = np.array([[1, 3, 0], [4, 7, 2], [3, 4, 2]]) # det0
+        #matriz = np.array([[1, 3, 0], [4, 7, 2], [3, 4, 2]]) # det0
         det = np.linalg.det(matriz)
         if det != 0.0:
             nc = np.linalg.cond(matriz)

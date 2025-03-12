@@ -48,12 +48,14 @@ def main():
     n = int(input("Ingrese tamaño de la matriz (n): "))
     matriz_valida = False
     while not matriz_valida:
-        matriz = np.random.randint(-20, 20, size=(n, n))
+        matriz = np.random.randint(-20, 21, size=(n, n))
         if np.linalg.det(matriz) != 0:
             matriz_valida = True
     #matriz = np.array([[2, 0], [0, 0]]) #det0
     #matriz = np.array([[5,0,0], [1,1,0],[1,1,2]]) #EjemploYTInverso1
     #matriz = np.array([[2,1], [1,5]]) #EjemploYTInverso2
+
+    matriz = np.array([[11.0,-2.5,-3.5,-1.0],[-2.5,0.0,-11.0,12.5],[-3.5,-11.0,10.0,-8.0],[-1.0,12.5,-8.0,4.0]])
     print(matriz)
     print("\nDeterminante = ", np.linalg.det(matriz))
     
